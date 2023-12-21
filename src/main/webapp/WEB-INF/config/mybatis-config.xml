@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "mybatis-3-config.dtd" >
+<configuration>
+	<enviroments default="jdbc">
+		<enviroment id="jdbc">
+			<transactionManager type="JDBC"></transactionManager>
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@192.168.2.101:1521:xe" />
+				<property name="username" value="kimhyun" />
+				<property name="password" value="1234" />
+			</dataSource>
+		</enviroment>
+	</enviroments>
+</configuration>

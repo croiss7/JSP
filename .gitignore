@@ -1,0 +1,61 @@
+# 한줄 주석
+# 중간에 바꾼다고 확정되지 않음
+
+
+# 해당 파일명 제외하고 공유하겠다
+.classpath
+.project
+
+# 루트 폴더에서 폴더 제외
+# .gitignore가 있는 위치로부터 내려가서 .setting를 제외해라 
+/.settings/
+
+# a/ 경로 상관없이 a라는 폴더는 모조리 제외해라
+build/
+
+# *  -> 아무 파일 
+# ** -> 아무 폴더
+/**/META-INF/
+# 아무 폴더 아래의 META-INF를 제외해라
+
+
+# config 폴더 아래의 모든 xml을 확장자로 가진 폴더를 제외해라
+config/*.xml
+
+# ? 토큰 : 아무거나
+# ??.txt 이름이 두글자인 텍스트 파일 제외
+
+#[abcde]t -> 여러 글자중 하나
+# at, bt, ct, dt, et 제외
+#[0-9] 범위 지정
+
+
+/**/com/java/jsp.test/
+# ! = important 얘는 제외하면 안돼
+!/**/com/java/jsp.test/Provider.java
+
+
+/**/WEB-INF/resources/.vscode/
+/**/WEB-INF/resources/node_modules/
+/**/WEB-INF/resources/package.json
+/**/WEB-INF/resources/package-lock.json
+
+
+# local repository      작업용 개인 공간
+
+# web repository        작업 공유용 공간
+
+# stage                 작업 이력을 저장하는 공간(버전)
+# add                   stage에 작업 이력을 추가함
+# commit                변경점을 적용
+# history               작업 이력
+# push                  commit한 이력을 web repository에 올리는 작업
+
+# branch                작업하는 환경을 일치시키지만, 작업은 따로 하는 다른 공간
+# merge                 서로 다른 branch를 하나로 변경하는 작업
+# fetch                 실제 파일을 바꾸는 건 위험하니까 web repository에서 stage만 받아와 갱신
+# pull                  fetch + merge(다운로드)
+
+# reset, revert         reset : history 명령어 -> 해당 위치로 이동/ revert : 해당 위치로 이동해서, 기존 작업한거 아까우니까 새로운 branch만들어
+# pull request(pr)      허용되지 않은 작업자가 작업을 가져가고 추천해줌
+
